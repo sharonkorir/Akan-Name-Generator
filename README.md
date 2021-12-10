@@ -1,4 +1,4 @@
-Akan Naming Calendar
+Akan Name Generator
 #### A web application that generates the user's Akan 'day' name, 10th December, 2021
 #### By **Sharon Korir**
 ## Description
@@ -13,7 +13,7 @@ I am currently a software development student at Moringa School
 * Click submit
 * Voila! Your Akan name should display on your browser
 ## Technologies Used
-This application uses HTML forms to collect input. The landing page has been styled using CSS and Bootstrap. JS functions are used to calculate the day of birth and output the user's Akan name depending on their gender.
+This application uses HTML forms to collect input. The landing page has been styled using CSS and Bootstrap. JS functions are used to calculate the day of birth and output the user's Akan 'day' name depending on their gender.
 ## Support and contact details
 If you run into any issues or have questions, ideas or concerns, reach out to me via e-mail, at sharon.korir@student.moringaschool.com
 ### License
