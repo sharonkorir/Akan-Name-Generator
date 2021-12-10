@@ -2,7 +2,7 @@ Akan Naming Calendar
 #### A web application that generates the user's Akan 'day' name, 10th December, 2021
 #### By **Sharon Korir**
 ## Description
-This is a web application that uses your birthday month and date to calculate the day you were born. The application then generates your Akan name, depending on your gender.
+This is a web application that uses your birthday month and date to calculate the day you were born. The application then generates your Akan 'day' name, depending on your gender.
 ## Author's information
 I am currently a software development student at Moringa School
 ## Setup/Installation Requirements
@@ -10,7 +10,7 @@ I am currently a software development student at Moringa School
 * Launch the application on your browser
 * Fill in the form with your birthday and gender
 * Specify your gender
-* Click submt
+* Click submit
 * Voila! Your Akan name should display on your browser
 ## Technologies Used
 This application uses HTML forms to collect input. The landing page has been styled using CSS and Bootstrap. JS functions are used to calculate the day of birth and output the user's Akan name depending on their gender.
