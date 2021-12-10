@@ -1,5 +1,5 @@
 Akan Naming Calendar
-#### A web application that generates the user's Akan name, 10th December, 2021
+#### A web application that generates the user's Akan 'day' name, 10th December, 2021
 #### By **Sharon Korir**
 ## Description
 This is a web application that uses your birthday month and date to calculate the day you were born. The application then generates your Akan name, depending on your gender.
