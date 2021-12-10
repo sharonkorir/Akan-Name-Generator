@@ -1,3 +1,13 @@
-.container{
+body{
+  background-image: url(../assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   
+}
+.grid-container{
+  background-color:#d291bc;
+  text-align:center;
+}
+button{
+  background-color:#ffdfd3;
 }
