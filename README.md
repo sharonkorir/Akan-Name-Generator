@@ -12,8 +12,6 @@ I am currently a software development student at Moringa School
 * Specify your gender
 * Click submt
 * Voila! Your Akan name should display on your browser
-## BDD
-
 ## Technologies Used
 This application uses HTML forms to collect input. The landing page has been styled using CSS and Bootstrap. JS functions are used to calculate the day of birth and output the user's Akan name depending on their gender.
 ## Support and contact details
