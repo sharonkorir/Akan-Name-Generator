@@ -6,7 +6,7 @@ This is a web application that uses your birthday month and date to calculate th
 ## Author's information
 I am currently a software development student at Moringa School
 ## Setup/Installation Requirements
-* Click on the link 
+* Click on the link https://sharonkorir.github.io/Akan-Naming-Application/
 * Launch the application on your browser
 * Fill in the form with your birthday and gender
 * Specify your gender
