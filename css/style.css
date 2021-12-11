@@ -1,13 +1,40 @@
 body{
   background-image: url(../assets/background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: cover; 
 }
+
+body h1{
+  font-size: 44px;
+  font-weight: bolder;
+}
+
 .grid-container{
-  background-color:#d291bc;
+  background-color:#e0bbe5;
+  opacity: 90%;
   text-align:center;
+  margin: 100px;
+  padding: 50px;
+  font-family:'Segoe UI';
+  font-size: 20px;
 }
+
 button{
-  background-color:#ffdfd3;
+  background-color:#e0bbe5;
+  font-weight: bold;
+}
+.box{
+  background-color:#ffdfd3; 
+  border: 10px ;
+  padding: 100px;
+  margin: 50px;
+  align-items: center;
+}
+form h5{
+  padding-top: 30px;
+  line-height:30px;
+}
+form label{
+  padding-top: 10px;
+  padding-bottom: 24px;
 }
