@@ -18,14 +18,16 @@
     </div>
     <div class="box">
       <form>
-        <h5>Birthday:</h5><input type="text">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
         <h5>Select your gender:</h5>
         <label for="male">Male</label>
-        <input type="radio">
+        <input type="radio" id="male" name="male">
         <label for="female">Female</label>
-        <input type="radio">
+        <input type="radio" id="female" name="female">
+        <br>
+        <input type="submit" name="submit" id="submit" value="Generate">  
       </form>
-      <button>Generate</button>
     </div>
   </div>
   </body>
