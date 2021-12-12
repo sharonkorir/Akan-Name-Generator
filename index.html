@@ -17,7 +17,7 @@
       <p>You can find out your Akan 'day' name by filling the form below and clicking generate. Have fun!</p>
     </div>
     <div class="box">
-      <form>
+      <form id="myform" onsubmit="submitForm(event)">
         <label for="birthday">Birthday</label>
         <input type="date" id="birthday" name="birthday">
         <h5>Select your gender:</h5>
@@ -30,5 +30,6 @@
       </form>
     </div>
   </div>
+  <script src="js/scripts.js"></script>
   </body>
 </html>
