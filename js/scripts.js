@@ -89,7 +89,6 @@ function generateMaleName(day) {
   document.getElementById('userMessageName').innerText = "Your Akan name is " + name;
   return name;
 }
-
 function generateFemaleName(day) {
   console.log(day)
   var femaleNames = [
