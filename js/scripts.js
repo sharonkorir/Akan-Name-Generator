@@ -79,11 +79,15 @@ function generateMaleName(day) {
     }
   ]
   console.log(maleNames)
+  var name = "";
   maleNames.forEach(function (object) {
     if(object.day === day){
-      return object.name;
+      name = object.name;
     }
   })
+  document.getElementById('userMessageName').hidden = false;
+  document.getElementById('userMessageName').innerText = "Your Akan name is " + name;
+  return name;
 }
 
 function generateFemaleName(day) {
@@ -119,9 +123,13 @@ function generateFemaleName(day) {
     }
   ]
   console.log(femaleNames)
+  var name = "";
   femaleNames.forEach(function (object) {
     if(object.day === day){
-      return object.name;
+      name = object.name;
     }
   })
+  document.getElementById('userMessageName').hidden = false;
+  document.getElementById('userMessageName').innerText = "Your Akan name is " + name;
+  return name;
 }
