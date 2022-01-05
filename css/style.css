@@ -38,3 +38,21 @@ form label{
   padding-top: 10px;
   padding-bottom: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .box{
+    background-color:#ffdfd3; 
+    padding: 10px;
+    margin: 2px;
+    align-items: center;
+  }
+  .grid-container{
+    background-color:#e0bbe5;
+    opacity: 85%;
+    text-align:center;
+    margin: 30px;
+    padding: 20px;
+    font-family:'Segoe UI';
+    font-size: 20px;
+  }
+}
