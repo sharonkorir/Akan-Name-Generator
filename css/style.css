@@ -22,6 +22,7 @@ body h1{
 #submit{
   background-color:#e0bbe5;
   font-weight: bold;
+  margin: 10px;
 }
 .box{
   background-color:#ffdfd3; 
@@ -30,6 +31,7 @@ body h1{
   margin: 50px;
   align-items: center;
 }
+
 form h5{
   padding-top: 30px;
   line-height:30px;
