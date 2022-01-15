@@ -3,18 +3,35 @@ function submitForm (event){
   //console.log("test");
   var birthday = document.getElementById("birthday").value;
   console.log(birthday);
+  //split string
+  var birthdayArray = birthday.split("-");
+  console.log(birthdayArray);
+  var dateOfBirth = birthdayArray[2];
+  var month = birthdayArray[1];
+  var year = birthdayArray[0];
+  // convert to integers
+  var dateInt = parseInt(dateOfBirth);
+  var monthInt = parseInt(month);
+  //get CC and YY
+  var century = year.slice(0,2);
+  var bornYear = year.slice(2,5);
+  console.log(century + " " + bornYear);
+  var CC = parseInt(century);
+  var YY = parseInt(bornYear);
+  console.log(CC + " " + YY);
+  //invalid input alert
   if(validateDate(birthday)){
     document.getElementById("userMessage").hidden = true;
-    var dayOfBirth = getDayOfBirth(birthday);
+    var dayOfBirth = getDayOfBirth(dateInt, monthInt, CC, YY);
     console.log(dayOfBirth)
     var male = document.getElementById("male").checked;
     var female = document.getElementById("female").checked;
     if(male){
-      console.log('male selected', dayOfBirth);
+      console.log('male selected')
       var maleName = generateMaleName(dayOfBirth)
       console.log(maleName)
     } else if(female){
-      console.log('female selected', dayOfBirth)
+      console.log('female selected')
       var femaleName = generateFemaleName(dayOfBirth)
       console.log(femaleName)
     } else{
@@ -25,7 +42,7 @@ function submitForm (event){
   } else {
     document.getElementById("userMessage").hidden = false;
     document.getElementById("userMessage").innerText = "birthday not set.";
-  }
+  } 
 }
 
 function validateDate (date){
@@ -39,96 +56,24 @@ function validateDate (date){
   }
 }
 
-function getDayOfBirth (date){
-  var d = new Date(date);
-  var day = d.getDay();
-  var weekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-  return weekDay[day]
+// add get day formula
+//Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+function getDayOfBirth (dateInt, monthInt, CC, YY,){
+  console.log( CC + " " + YY);
+  var bornDay = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(monthInt+1)/10)) + dateInt ) % 7;
+  var dw = Math.floor(bornDay);
+  console.log(dw);
+  generateMaleName(dw);
 }
 
-function generateMaleName(day) {
-  console.log(day)
-  var maleNames = [
-    {
-      name: 'Kwasi',
-      day: 'Sunday'
-    },
-    {
-      name: 'Kwadwo',
-      day: 'Monday'
-    },
-    {
-      name: 'Kwabena',
-      day: 'Tuesday'
-    },
-    {
-      name: 'Kwaku',
-      day: 'Wednesday'
-    },
-    {
-      name: 'Yaw',
-      day: 'Thursday'
-    },
-    {
-      name: 'Kofi',
-      day: 'Friday'
-    },
-    {
-      name: 'Kwame',
-      day: 'Saturday'
-    }
-  ]
-  console.log(maleNames)
-  var name = "";
-  maleNames.forEach(function (object) {
-    if(object.day === day){
-      name = object.name;
-    }
-  })
-  document.getElementById('userMessageName').hidden = false;
-  document.getElementById('userMessageName').innerText = "Your Akan name is " + name;
-  return name;
-}
-function generateFemaleName(day) {
-  console.log(day)
-  var femaleNames = [
-    {
-      name: 'Akosua',
-      day: 'Sunday'
-    },
-    {
-      name: 'Adwoa',
-      day: 'Monday'
-    },
-    {
-      name: 'Abenaa',
-      day: 'Tuesday'
-    },
-    {
-      name: 'Akua',
-      day: 'Wednesday'
-    },
-    {
-      name: 'Yaa',
-      day: 'Thursday'
-    },
-    {
-      name: 'Afua',
-      day: 'Friday'
-    },
-    {
-      name: 'Ama',
-      day: 'Saturday'
-    }
-  ]
-  console.log(femaleNames)
-  var name = "";
-  femaleNames.forEach(function (object) {
-    if(object.day === day){
-      name = object.name;
-    }
-  })
-  document.getElementById('userMessageName').hidden = false;
-  document.getElementById('userMessageName').innerText = "Your Akan name is " + name;
-  return name;
-}
+function generateMaleName(dw) {
+  console.log(dw);
+  var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]
+  if(dw == 1 && "male selected" == true){
+    alert("You were born on" + week[0] + "Your Akan name is " + maleNames[0]);
+   } else if(dw == 2){
+     alert("no")
+   }
+  }
